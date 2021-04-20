@@ -1,0 +1,26 @@
+{
+    "name": "halloverden/symfony-messenger-queue-notifications-bundle",
+    "description": "Symfony messenger queue notifications",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Roar Furunes",
+            "email": "tom@forbundspartner.no"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4",
+        "symfony/framework-bundle": "^5.2",
+        "doctrine/doctrine-bundle": "^2.3",
+        "doctrine/orm": "^2.8",
+	    "halloverden/symfony-messenger-queue-events-bundle" : "dev-feature/initial-release"
+    },
+    "autoload": {
+        "psr-4": {
+            "HalloVerden\\MessengerQueueNotificationsBundle\\": "src"
+        }
+    }
+}
