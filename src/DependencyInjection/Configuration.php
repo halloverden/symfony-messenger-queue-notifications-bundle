@@ -46,7 +46,7 @@ class Configuration implements ConfigurationInterface {
             ->arrayNode('transports')
               ->arrayPrototype()
                 ->children()
-                  ->integerNode('max_messages')->defaultValue(1)->end()
+                  ->integerNode('max_messages')->defaultValue(0)->end()
                   ->integerNode('event_interval')->defaultValue(1800)->end()
                   ->integerNode('max_events')->defaultValue(100)->end()
                 ->end()
