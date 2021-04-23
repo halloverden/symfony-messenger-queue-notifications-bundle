@@ -9,7 +9,7 @@ services:
         arguments:
             $eventSentRepository: '@hallo_verden_queue_notifications.event_sent_repository'
             $eventDispatcher: '@event_dispatcher'
-            $configs: !abstract defined in extenstion
+            $configs: !abstract defined in extension
         tags:
             - { name: kernel.event_subscriber }
 
@@ -18,6 +18,6 @@ services:
         arguments:
             $eventSentRepository: '@hallo_verden_queue_notifications.event_sent_repository'
             $eventDispatcher: '@event_dispatcher'
-            $configs: !abstract defined in extenstion
+            $configs: !abstract defined in extension
         tags:
             - { name: kernel.event_subscriber }
