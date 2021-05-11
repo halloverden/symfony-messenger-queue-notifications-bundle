@@ -1,0 +1,13 @@
+hallo_verden_queue_notifications:
+    message_queue_stopped_event:
+        transports:
+            async:
+                max_handle_time: 300
+                event_interval: 1800
+                max_events: 100
+    message_queue_has_messages_event:
+        transports:
+            failed:
+                event_interval: 1800
+                max_events: 100
+                max_messages: 0

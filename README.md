@@ -40,6 +40,16 @@ return [
 ];
 ```
 
+### Step 3: Create and execute migration
+
+The event_sent table needs to be created. To do this, execute:
+
+```shell
+bin/console doctrine:migrations:diff
+# Check if your migration is correct first.
+bin/console doctrine:migrations:migrate
+```
+
 Documentation
 =============
 

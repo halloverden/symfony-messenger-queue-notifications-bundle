@@ -1,0 +1,23 @@
+services:
+    hallo_verden_queue_notifications.event_sent_repository:
+        class: HalloVerden\MessengerQueueNotificationsBundle\Repository\EventSentRepository
+        arguments:
+            $registry: '@doctrine'
+
+    hallo_verden_queue_notifications.listener.check_message_queue_stopped:
+        class: HalloVerden\MessengerQueueNotificationsBundle\EventListener\CheckMessageQueueStoppedListener
+        arguments:
+            $eventSentRepository: '@hallo_verden_queue_notifications.event_sent_repository'
+            $eventDispatcher: '@event_dispatcher'
+            $configs: !abstract defined in extension
+        tags:
+            - { name: kernel.event_subscriber }
+
+    hallo_verden_queue_notifications.listener.check_message_queue_has_messages:
+        class: HalloVerden\MessengerQueueNotificationsBundle\EventListener\CheckMessageQueueHasMessagesListener
+        arguments:
+            $eventSentRepository: '@hallo_verden_queue_notifications.event_sent_repository'
+            $eventDispatcher: '@event_dispatcher'
+            $configs: !abstract defined in extension
+        tags:
+            - { name: kernel.event_subscriber }
