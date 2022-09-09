@@ -12,11 +12,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.4",
-        "symfony/framework-bundle": "^5.2",
+        "php": ">=8.1",
+        "symfony/framework-bundle": "^5.4|^6.1",
         "doctrine/doctrine-bundle": "^2.3",
         "doctrine/orm": "^2.8",
-	    "halloverden/symfony-messenger-queue-events-bundle" : "^1.0"
+	    "halloverden/symfony-messenger-queue-events-bundle" : "^1.1"
     },
     "autoload": {
         "psr-4": {
