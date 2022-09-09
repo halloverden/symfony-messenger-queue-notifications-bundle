@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8b09eb29fe1e99644edb615e55e6e7c",
+    "content-hash": "d1edac67950f1f4f365ba3b1663a837d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1183,16 +1183,16 @@
         },
         {
             "name": "halloverden/symfony-messenger-queue-events-bundle",
-            "version": "dev-feature/allow-symfony-6",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/halloverden/symfony-messenger-queue-events-bundle.git",
-                "reference": "0123e5d2efbe9d6fec705e92365043a85a8ed9ec"
+                "reference": "92bfa968fb9dfc3f1b03c82392cdc181a1bf2a3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/halloverden/symfony-messenger-queue-events-bundle/zipball/0123e5d2efbe9d6fec705e92365043a85a8ed9ec",
-                "reference": "0123e5d2efbe9d6fec705e92365043a85a8ed9ec",
+                "url": "https://api.github.com/repos/halloverden/symfony-messenger-queue-events-bundle/zipball/92bfa968fb9dfc3f1b03c82392cdc181a1bf2a3d",
+                "reference": "92bfa968fb9dfc3f1b03c82392cdc181a1bf2a3d",
                 "shasum": ""
             },
             "require": {
@@ -1222,9 +1222,9 @@
             "description": "Additional events for symfony messenger",
             "support": {
                 "issues": "https://github.com/halloverden/symfony-messenger-queue-events-bundle/issues",
-                "source": "https://github.com/halloverden/symfony-messenger-queue-events-bundle/tree/feature/allow-symfony-6"
+                "source": "https://github.com/halloverden/symfony-messenger-queue-events-bundle/tree/1.1.0"
             },
-            "time": "2022-09-08T14:31:17+00:00"
+            "time": "2022-09-09T09:58:40+00:00"
         },
         {
             "name": "psr/cache",
@@ -3892,18 +3892,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "halloverden/symfony-messenger-queue-events-bundle",
-            "version": "dev-feature/allow-symfony-6",
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "halloverden/symfony-messenger-queue-events-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
