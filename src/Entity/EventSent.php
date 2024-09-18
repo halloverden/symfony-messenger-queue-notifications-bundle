@@ -5,57 +5,26 @@ namespace HalloVerden\MessengerQueueNotificationsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Class EventSent
- *
- * @package HalloVerden\MessengerQueueNotificationsBundle\Entity
- *
- * @ORM\Entity()
- */
+#[ORM\Entity]
 class EventSent {
 
-  /**
-   * @var int
-   *
-   * @ORM\Id()
-   * @ORM\GeneratedValue(strategy="AUTO")
-   * @ORM\Column(name="id", type="integer", unique=true)
-   */
+  #[ORM\Id, ORM\GeneratedValue(strategy: 'AUTO'), ORM\Column(name: 'id', type: 'integer', unique: true)]
   private int $id;
 
-  /**
-   * @var string
-   *
-   * @ORM\Column(name="event", type="string", nullable=false)
-   */
+  #[ORM\Column(name: 'event', type: 'string', nullable: false)]
   private string $event;
 
-  /**
-   * @var int
-   *
-   * @ORM\Column(name="count", type="integer", nullable=false)
-   */
+  #[ORM\Column(name: 'count', type: 'integer', nullable: false)]
   private int $count;
 
-  /**
-   * @var string
-   *
-   * @ORM\Column(name="transport", type="string", nullable=false)
-   */
+  #[ORM\Column(name: 'transport', type: 'string', nullable: false)]
   private string $transport;
 
-  /**
-   * @var \DateTime
-   *
-   * @ORM\Column(name="last_sent", type="datetime", nullable=false)
-   */
+  #[ORM\Column(name: 'last_sent', type: 'datetime', nullable: false)]
   private \DateTime $lastSent;
 
   /**
    * EventSent constructor.
-   *
-   * @param string $event
-   * @param string $transport
    */
   public function __construct(string $event, string $transport) {
     $this->event = $event;
