@@ -16,7 +16,7 @@
         "symfony/framework-bundle": "^6.4|^7.1",
         "doctrine/doctrine-bundle": "^2.13",
         "doctrine/orm": "^2.18|^3.2",
-	    "halloverden/symfony-messenger-queue-events-bundle" : "^1.2"
+        "halloverden/symfony-messenger-queue-events-bundle" : "^1.2"
     },
     "autoload": {
         "psr-4": {
