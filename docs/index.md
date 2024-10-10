@@ -29,6 +29,6 @@ Usage
 =====
 
 Create a cronjob that executes `bin/console hallo_verden:messenger-transport-status-events:dispatch`
-at a desired interval (i.e. every second)
+at a desired interval (i.e. every minute)
 
 You can now create event listeners to act on these events.
