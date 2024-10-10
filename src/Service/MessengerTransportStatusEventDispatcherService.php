@@ -166,6 +166,7 @@ final readonly class MessengerTransportStatusEventDispatcherService {
    *
    * @return bool
    * @throws Exception
+   * @throws \DateInvalidOperationException
    */
   private function isEventRecentlySent(string $transport, string $event, array $intervals, ?\DateTimeImmutable & $lastSentAt = null, ?int & $count = null): bool {
     $count = $this->statusEventSentRepository->getStatusEventsSentCount($transport, $event);
