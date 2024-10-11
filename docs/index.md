@@ -2,31 +2,33 @@ Configuration
 =============
 
 ```yaml
-hallo_verden_queue_notifications:
-    message_queue_stopped_event:
-        transports:
-            async:
-                max_handle_time: 300
-                event_interval: 1800
-                max_events: 2
-    message_queue_has_messages_event:
-        transports:
-            failed:
-                event_interval: 1800
-                max_events: 10
-                max_messages: 0
+hallo_verden_messenger_queue_notifications:
+    messenger_transport_has_stopped_event:
+        async:
+            event_intervals:
+                - '1 hour'
+                - '5 hours'
+                - '24 hours'
+            max_worker_running_interval: '5 minutes'
+    messenger_transport_has_messages_event:
+        failed:
+            event_intervals:
+                - '1 hour'
+                - '5 hours'
+                - '24 hours'
+            max_messages: 0
 ```
 
-Here `MessageQueueStoppedEvent` will get dispatched if the message queue has stopped for 300 seconds or more 
-every 1800 seconds and maximum 2 events.
+Here `MessengerTransportHasStoppedEvent` will get dispatched if the worker for the async transport has stopped for 5 minutes or more, 
+with a reminder after 1 hour, 5 hours and then every 24 hours.
 
-Also `MessageQueueHasMessagesEvent` will get dispatched if the failed transport has messages every 1800 seconds,
-maximum 10 times.
+Also `MessengerTransportHasMessagesEvent` will get dispatched if the failed transport has more than 0 messages,
+with a reminder after 1 hour, 5 hours and then every 24 hours.
 
 Usage
 =====
 
-Create a cronjob that executes `bin/console hallo_verden:messenger_queue_events:dispatch`
-at a desired interval (i.e. every 15 seconds)
+Create a cronjob that executes `bin/console hallo_verden:messenger-transport-status-events:dispatch`
+at a desired interval (i.e. every minute)
 
 You can now create event listeners to act on these events.

@@ -1,13 +1,9 @@
 hallo_verden_queue_notifications:
-    message_queue_stopped_event:
-        transports:
-            async:
-                max_handle_time: 300
-                event_interval: 1800
-                max_events: 100
-    message_queue_has_messages_event:
-        transports:
-            failed:
-                event_interval: 1800
-                max_events: 100
-                max_messages: 0
+    messenger_transport_has_stopped_event:
+        async:
+            event_intervals: [3600]
+            max_worker_running_interval: 5 minutes
+    messenger_transport_has_messages_event:
+        failed:
+            event_intervals: [3600]
+            max_messages: 0
