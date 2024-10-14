@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping\Table;
 use HalloVerden\MessengerQueueNotificationsBundle\Repository\MessengerTransportStatusRepository;
 
 #[Entity(repositoryClass: MessengerTransportStatusRepository::class), Table(name: 'messenger_transport_status')]
-final class MessengerTransportStatus {
+class MessengerTransportStatus {
 
   #[Id, GeneratedValue(strategy: 'AUTO'), Column(name: 'id', type: Types::INTEGER, unique: true)]
   private readonly int $id;

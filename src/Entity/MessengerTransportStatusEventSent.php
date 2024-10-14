@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\Table;
 
 #[Entity, Table(name: 'messenger_transport_status_event_sent')]
-final class MessengerTransportStatusEventSent {
+class MessengerTransportStatusEventSent {
 
   #[Id, GeneratedValue(strategy: 'AUTO'), Column(name: 'id', type: Types::INTEGER, unique: true)]
   private readonly int $id;
